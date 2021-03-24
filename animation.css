@@ -1,0 +1,45 @@
+div {
+  animation: mymove 1s;
+  animation: yourmove 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 2;
+  animation-direction:alternate;
+  
+}
+div:hover{
+  animation-play-state: paused;
+}
+@keyframes mymove {
+    from {left: 0px;} /* 0% */
+    to {left: 200px;} /* 100% */  
+}
+@keyframes yourmove{
+    from {
+    top: 0px;      
+    left: 0px;} /* 0% */
+    
+    25% {    
+      left: 50px;
+      top:0px;} /* 0% */
+
+    75% {    
+      left:50px;
+      top: 50px;} /* 0% */
+
+    to {
+      top: 50px;
+      left: 0px;} /* 100% */ 
+}
+#bounce-title{
+  position: relative;
+  animation: bounce ;
+  animation: bounce 0.30s ease infinite alternate;
+  
+}
+@keyframes bounce {
+  
+    from {bottom: 60px;}
+    to   {bottom: -5px;
+          transform: scaleY(0.5);
+          }
+
